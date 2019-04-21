@@ -1,0 +1,91 @@
+@font-face {
+  font-family: Open Sans;
+  src: url("../fonts/open-sans-light.woff2") format("woff2");
+  font-weight: lighter;
+  font-style: normal;
+}
+@font-face {
+  font-family: Open Sans;
+  src: url("../fonts/open-sans-regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Open Sans;
+  src: url("../fonts/open-sans-bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+html {
+  background-color: #ffffff;
+}
+body {
+  min-width: $mobile-width;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  font-style: normal;
+  color: $font-color-main;
+  background-color: $bg-color-main;
+  &.content-page {
+    max-width: $mobile-width;
+  }
+  @media (min-width: $tablet-width) {
+    min-width: $tablet-width;
+    max-width: $desktop-width - 1;
+    &.content-page {
+      max-width: $tablet-width;
+    }
+  }
+  @media (min-width: $desktop-width) {
+    width: 1200px;
+    font-size: 18px;
+    line-height: 30px;
+    &.content-page {
+      max-width: $desktop-width;
+    }
+  }
+}
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  @include reset-list-style;
+}
+
+a {
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+picture {
+  display: inline-flex;
+}
+
+button {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}

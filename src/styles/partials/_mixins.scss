@@ -1,0 +1,20 @@
+@mixin reset-list-style {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@mixin button-reset {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
