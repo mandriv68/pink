@@ -1,0 +1,59 @@
+.site-nav {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 69px;
+  width: 100%;
+  background-color: $blue;
+  &__item {
+    width: 100%;
+    height: auto;
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.15), inset 0 -1px 0 0 #000000;
+  }
+  &__link {
+    width: 100%;
+    padding-top: 21px;
+    padding-bottom: 21px;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+    &:hover {
+      color: $pink;
+    }
+    text-align: center;
+    &:active {
+      color: rgba($pink, 0.3);
+    }
+  }
+}
+@media (min-width: 660px) {
+  .site-nav {
+    top: 109px;
+  }
+}
+@media (min-width: 1200px) {
+  .site-nav {
+  position: static;
+  display: flex;
+  align-items: center;
+  width: auto;
+  background-color: transparent;
+  &__item {
+    width: auto;
+    height: auto;
+    box-shadow: none;
+    margin-right: 80px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    width: 100%;
+    font-weight: normal;
+    text-transform: none;
+    color: #ffffff;
+  }
+}
+}

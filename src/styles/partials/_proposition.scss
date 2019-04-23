@@ -1,0 +1,84 @@
+.proposition {
+  padding: 28px 20px;
+  background-color: #1d2631;
+  &__title {
+    display: none;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 300;
+    text-align: center;
+    color: #ffffff;
+  }
+  &__btn {
+    width: 100%;
+    margin-bottom: 30px;
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+  &__icon-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 22px;
+  }
+  &__icon {
+    width: 50px;
+    height: 60px;
+    &--apple{
+      background: url("../img/svg/icon-apple.svg") center no-repeat;
+      background-size: 47px 56px;
+    }
+    &--android {
+      margin: 0 35px;
+      background: url("../img/svg/icon-android.svg") center no-repeat;
+      background-size: 43px 47px;
+    }
+    &--microsoft {
+      background: url("../img/svg/icon-microsoft.svg") center no-repeat;
+      background-size: 44px 41px;
+    }
+  }
+  &__description {
+    color: #ffffff;
+    text-align: center;
+  }
+}
+@media (min-width: $tablet-width) {
+  .proposition {
+    width: 300px;
+    background-color: transparent;
+    &__title {
+      display: block;
+      padding: 0 50px;
+      margin-bottom: 34px;
+    }
+    &__btn {
+      margin-bottom: 45px;
+    }
+    &__list {
+      margin-bottom: 34px;
+    }
+  }
+}
+@media (min-width: $desktop-width) {
+  .proposition {
+    width: 300px;
+    background-color: transparent;
+    &__title {
+      padding: 0;
+      margin-bottom: 50px;
+      font-size: 50px;
+      line-height: 60px;
+    }
+    &__btn {
+      margin-bottom: 70px;
+    }
+    &__list {
+      margin-bottom: 50px;
+    }
+    &__description {
+      line-height: 24px;
+    }
+  }
+}

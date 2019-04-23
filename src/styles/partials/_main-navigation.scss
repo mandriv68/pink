@@ -1,0 +1,119 @@
+.main-navigation {
+  position: relative;
+  margin-bottom: 321px;
+  .no-js &__toggle {
+    display: none;
+  }
+  &__toggle {
+    box-shadow: 0 0 0 1px red;
+    z-index: 3;
+    position: absolute;
+    top: 21px;
+    right: 20px;
+    width: 50px;
+    height: 24px;
+    text-align: right;
+    cursor: pointer;
+    &--open,
+    &--close {
+      height: 24px;
+      fill: #ffffff;
+      cursor: pointer;
+    }
+    &--open {
+      width: 50px;
+    }
+    &--close {
+      display: none;
+      width: 24px;
+    }
+    &:hover &--open,
+    &:hover &--close {
+      fill: $pink;
+    }
+    &:active &--open,
+    &:active &--close {
+      fill: rgba($pink, 0.3);
+    }
+  }
+  &__logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 69px;
+    background-color: $blue;
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.15), inset 0 -1px 0 0 #000000;
+  }
+  &__logo-link {
+    width: 100%;
+    height: 100%;
+    background: url("../img/svg/logo-mobile-white.svg") left 20px top 22px no-repeat;
+    background-size: 75px 22px;
+    @include hide-text;
+    &:hover {
+      background: url("../img/svg/logo-mobile-pink.svg") left 20px top 22px no-repeat;
+      background-size: 75px 22px;
+    }
+    background-size: 75px 22px;
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+@media (min-width: 660px) {
+  .main-navigation {
+    &__toggle {
+      top: 42px;
+    }
+    &__logo {
+      height: 109px;
+    }
+    &__logo-link {
+      background: url("../img/svg/logo-tablet-white.svg") left 20px center no-repeat;
+      background-size: 147px 40px;
+      &:hover {
+        background: url("../img/svg/logo-tablet-pink.svg") left 20px center no-repeat;
+        background-size: 147px 40px;
+      }
+      &:active {
+        opacity: 0.3;
+      }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .main-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 109px;
+    margin-bottom: 0;
+    padding-left: 130px;
+    padding-right: 130px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.3);
+    &__toggle {
+      display: none;
+    }
+    &__logo {
+      position: static;
+      width: 150px;
+      height: 109px;
+      box-shadow: none;
+      background-color: transparent;
+    }
+    &__logo-link {
+      background: url("../img/svg/logo-desktop-white.svg") center no-repeat;
+      background-size: 147px 40px;
+      &:hover {
+        background: url("../img/svg/logo-desktop-pink.svg") center no-repeat;
+        background-size: 147px 40px;
+      }
+      &:active {
+        opacity: 0.3;
+      }
+    }
+  }
+}

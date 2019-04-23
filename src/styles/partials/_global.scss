@@ -1,7 +1,7 @@
 @font-face {
   font-family: Open Sans;
-  src: url("../fonts/open-sans-light.woff2") format("woff2");
-  font-weight: lighter;
+  src: url("../fonts/open-sans-300.woff2") format("woff2");
+  font-weight: 300;
   font-style: normal;
 }
 @font-face {
@@ -36,18 +36,13 @@ body {
   }
   @media (min-width: $tablet-width) {
     min-width: $tablet-width;
-    max-width: $desktop-width - 1;
-    &.content-page {
-      max-width: $tablet-width;
-    }
+    max-width: 768px;
   }
   @media (min-width: $desktop-width) {
     width: 1200px;
+    max-width: 1200px;
     font-size: 18px;
     line-height: 30px;
-    &.content-page {
-      max-width: $desktop-width;
-    }
   }
 }
 .visually-hidden {
@@ -88,4 +83,16 @@ button {
   padding: 0;
   border: none;
   background-color: transparent;
+}
+
+.btn {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 18px;
+  line-height: 19px;
+  font-weight: bold;
+  text-align: center;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 27px;
 }

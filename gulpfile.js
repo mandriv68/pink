@@ -42,7 +42,7 @@ const serverConfig = {
     baseDir: './build'
   },
   // tunnel: true,
-  port: 3000,
+  port: 8000,
   host: 'localhost',
   logPrefix: "Frontend_Devil"
 }
